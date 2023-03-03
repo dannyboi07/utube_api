@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+
+  # server:
+  #   image: utube_server
+  #   build:
+  #     context: .
+  #     dockerfile: dev.Dockerfile
+  #   ports:
+  #     - ${PORT}:${PORT}
+  #   environment:
+  #     - REDIS_ADDR=redis:6379
+  #     - REDIS_DB=${REDIS_DB}
+
+  redis:
+    image: redis:alpine
+    ports:
+      - 6379:6379
+    volumes:
+      - ./redis_data/data:/data

@@ -1,0 +1,3 @@
+.gitignore
+*.mp4
+docker-compose.dev.yml
